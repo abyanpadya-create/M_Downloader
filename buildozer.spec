@@ -10,7 +10,7 @@ title = Mdl Apk
 package.name = mdlapk
 
 # (str) Package domain (needed for android/ios packaging)
-package.domain = org.shipit
+package.domain = org.abyan
 
 # (str) Source code where the main.py live
 source.dir = .
@@ -28,7 +28,7 @@ source.exclude_dirs = tests, bin, venv, .venv, .git, .github, dist, build, __pyc
 version = 0.1.0
 
 # (list) Application requirements (comma separated)
-requirements = python3,kivy
+requirements = python3,kivy,requests,yt-dlp,certifi,urllib3
 
 # (str) Supported orientation
 orientation = portrait
@@ -44,7 +44,8 @@ android.api = 33
 android.minapi = 24
 android.ndk = 25b
 android.accept_sdk_license = True
-android.archs = arm64-v8a, armeabi-v7a
+android.archs = arm64-v8a
+android.permissions = INTERNET,WRITE_EXTERNAL_STORAGE,READ_EXTERNAL_STORAGE
 android.logcat_filters = *:S python:D
 
 # Detected entry: main.py
